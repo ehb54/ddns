@@ -36,8 +36,12 @@ I also edited `/etc/crontab` on the secured server to run this script.
 
 ### speed of updates
 
-Both the client behind the ISP and the secure server are updating DNS at 5 minute intervals, so this may cause a 10 minute lag.
+Both the client behind the ISP and the secure server are updating at 5 minute intervals, so this may cause a 10 minute lag.
+One could shorten the update intervals in the `/etc/crontab`s.
+My `myhost.ydns.eu` DNS entry shows TTL of 246 seconds, so another 4.1 minute lag can be added.
 Additional DDNS DNS updates and intermediate DNS server caching may cause further lags.
+
+
 
 
 
