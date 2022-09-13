@@ -22,7 +22,9 @@ I included this file as `ddns/ydns_updater.sh` in this repo as a convenience.
 
 On the secured remote server, adding `Allowusers me@mydomain.ydns` to `sshd_config` didn't work :(
 After some experimentation, I discovered that `sshd` does a reverse lookup on the IP address (& it seems only if `UseDNS yes` set) and if that domain name doesn't match, then game over.
-However, `sshd` will allow domain names from /etc/hosts, so I created a script `ddns/update_etc_hosts.sh` on the secured remote server to update `/etc/hosts` with the DDNS IP and a `fake` domain name and used that in `sshd_config` & it works :)
+However, `sshd` will allow domain names from /etc/hosts, so I created a script `ddns/update_etc_hosts.sh` on the secured remote server to update `/etc/hosts` with the DDNS IP and a `myhost.local` domain name and used that in `sshd_config` & it works :)
+
+Note - you need to initially add an initial IP and the `myhost.local` domain name to `/etc/hosts` for the script to work.
 
 I also edited `/etc/crontab` on the secured server to run this script.
 ```
