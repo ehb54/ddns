@@ -11,4 +11,4 @@ IP=`getent hosts $DDNS_NAME | awk '{ print $1 }'`
 
 # echo IP is $IP                                                                                                                                                                                                      
 
-sed -i 's/^.*$HOSTS_ENTRY/$IP $HOSTS_ENTRY/' $HOSTS_FILE
+sed -i "s/^.*$HOSTS_ENTRY/$IP $HOSTS_ENTRY/" $HOSTS_FILE
