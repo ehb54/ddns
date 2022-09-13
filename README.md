@@ -20,7 +20,7 @@ I included this file as `ddns/ydns_updater.sh` in this repo as a convenience.
 
 ### sshd_config
 
-On the secured remote server, adding `Allowusers me@mydomain.ydns` to `sshd_config` didn't work :(
+On the secured remote server, adding `Allowusers myuser@myhost.ydns.eu` to `sshd_config` didn't work :(
 
 After some experimentation, I discovered that `sshd` does a reverse lookup on the IP address (& it seems only if `UseDNS yes` set) and if that domain name doesn't match, then game over.
 
