@@ -34,6 +34,11 @@ I also edited `/etc/crontab` on the secured server to run this script.
 */5 *   * * *   root    /etc/ddns/update_etc_hosts.sh
 ```
 
+### speed of updates
+
+Both the client behind the ISP and the secure server are updating DNS at 5 minute intervals, so this may cause a 10 minute lag.
+Additional DDNS DNS updates and intermediate DNS server caching may cause further lags.
+
 
 
 
