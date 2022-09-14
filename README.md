@@ -43,7 +43,7 @@ One could shorten the update intervals in the `/etc/crontab`s.
 
 My `myhost.ydns.eu` DNS entry shows TTL of 246 seconds, so another 4.1 minute lag can be added.
 
-Additional DDNS DNS updates and intermediate DNS server caching may cause further lags.
+Intermediate DNS server caching may cause further lags.
 
 ### a better strategy ?
 
