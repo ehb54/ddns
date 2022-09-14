@@ -45,7 +45,12 @@ My `myhost.ydns.eu` DNS entry shows TTL of 246 seconds, so another 4.1 minute la
 
 Additional DDNS DNS updates and intermediate DNS server caching may cause further lags.
 
+### a better strategy ?
 
+A better strategy to achive the aim (inform secure server of the new IP address), certainly with less time lag, would be to store the IP on some publicly accessible endpoint (key value store).
+i.e. avoid DNS and associated TTL lags completely.
+
+In this scenario, the client would update the public key value store directly (securely!) & the secured server would read this value to update `/etc/hosts`
 
 
 
