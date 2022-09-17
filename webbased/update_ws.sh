@@ -7,10 +7,11 @@ WEB_USER="me"
 WEB_ROOT="/path/to/webtroot"
 FILENAME="myfile"
 EXTRACMDS=""
+IPINFO="https://ipinfo.io/ip"
 
 # end config
 
-IP=$(curl -k --silent https://ydns.io/api/v1/ip)
+IP=$(curl -k --silent $IPINFO)
 
 OIP=$(curl -k --silent https://$WEB_HOST/$FILENAME)
 
