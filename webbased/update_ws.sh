@@ -15,6 +15,6 @@ IP=$(curl -k --silent $IPINFO)
 
 OIP=$(curl -k --silent https://$WEB_HOST/$FILENAME)
 
-if [ $IP != $OIP ]; then
+if [ -z "${OIP}" ] || [ $IP != $OIP ]; then
     ssh $WEB_USER@$WEB_HOST -C "echo $IP > $WEB_ROOT/$FILENAME $EXTRACMDS"
 fi
