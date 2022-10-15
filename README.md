@@ -56,4 +56,4 @@ In this scenario, the client would update the public key value store directly (s
 Use an accessible webserver to write the IP. Code is in `webserver`
 
 ### future work
-Prehaps run the client side directly on the router.
+Perhaps run the client side directly on the router.
